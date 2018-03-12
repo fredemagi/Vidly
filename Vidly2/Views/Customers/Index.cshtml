@@ -13,21 +13,50 @@
 
 else
 {
-    <table class="table table-condensed table-hover table-bordered table-striped">
+    <table id="customers" class="table table-condensed table-hover table-bordered table-striped">
         <h1>Customers</h1>
         <tr>
             <th>Name</th>
-            <th>DiscountRate</th>
+            <th>Membership Type</th>
+            <th>Delete</th>
         </tr>
         @foreach (var customer in Model)
         {
             <tr>
                 <td>@Html.ActionLink(customer.Name, "Edit", "Customers", new { id = customer.Id }, null)</td>
-                <td>@if (customer.Birthday.HasValue) { customer.Birthday.Value.ToString(); } hej</td>
+                <td>@customer.MembershipType.Name</td>
+                <td>
+                    <button data-customer-id="@customer.Id" class="btn btn-link js-delete">Delete</button>
+                </td>
   
               </tr>
         }
     </table>
+
+ @section scripts
+ { 
+    <script>
+        $(function ()
+        {
+            $("#customers .js-delete").click(function ()
+            {
+                var button = $(this);
+                bootbox.confirm("Are you sure?", function (result)
+                {
+                    $.ajax(
+                    {
+                        url: "/api/customers/" + button.attr("data-customer-id"),
+                        method: "DELETE",
+                        success: function ()
+                        {
+                            button.parents("tr").remove();
+                        }
+                    });
+                });
+            });
+        });
+     </script>
+ }
 }
 
 

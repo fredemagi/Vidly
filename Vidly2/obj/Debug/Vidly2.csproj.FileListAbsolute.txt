@@ -138,3 +138,5 @@ C:\Users\Frederik\source\repos\Vidly2\Vidly2\bin\System.Web.Http.WebHost.dll
 C:\Users\Frederik\source\repos\Vidly2\Vidly2\bin\System.Net.Http.Formatting.xml
 C:\Users\Frederik\source\repos\Vidly2\Vidly2\bin\System.Web.Http.xml
 C:\Users\Frederik\source\repos\Vidly2\Vidly2\bin\System.Web.Http.WebHost.xml
+C:\Users\Frederik\source\repos\Vidly2\Vidly2\bin\AutoMapper.dll
+C:\Users\Frederik\source\repos\Vidly2\Vidly2\bin\AutoMapper.xml
