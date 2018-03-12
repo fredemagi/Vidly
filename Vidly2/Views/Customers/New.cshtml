@@ -4,18 +4,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Customer</h2>
+<h2>@Model.Title</h2>
 
-@using (Html.BeginForm("Create", "Customers"))
+@using (Html.BeginForm("Save", "Customers"))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Name)
-        @Html.TextAreaFor(m => m.Customer.Name, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.Name)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Birthday)
-        @Html.TextAreaFor(m => m.Customer.Birthday, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Customer.Birthday, "{0:d. MMM yyyy}", new { @class = "form-control" })
     </div>
 
     <div class="checkbox">
@@ -25,7 +26,12 @@
 
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.MembershipTypeId)
-        @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select from the list", new { @class = "form-control"})
+        @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select from the list", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.MembershipType)
+
     </div>
+
+    @Html.HiddenFor(m => m.Customer.Id)
+    <input type="submit" name="submit" value="Submit" class="btn btn-primary"/>
 }
 

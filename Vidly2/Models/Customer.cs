@@ -10,7 +10,7 @@ namespace Vidly2.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Dude! The name field is required!!")]
         [StringLength(255)]
         public string Name { get; set; }
         public bool IsSubscribedToNewsletter { get; set; }

@@ -132,3 +132,9 @@ C:\Users\Frederik\source\repos\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.CreateM
 C:\Users\Frederik\source\repos\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.PopulateGenresTable.resources
 C:\Users\Frederik\source\repos\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.PopulateMoviesTable.resources
 C:\Users\Frederik\source\repos\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.PopulateMoviesTable1.resources
+C:\Users\Frederik\source\repos\Vidly2\Vidly2\bin\System.Net.Http.Formatting.dll
+C:\Users\Frederik\source\repos\Vidly2\Vidly2\bin\System.Web.Http.dll
+C:\Users\Frederik\source\repos\Vidly2\Vidly2\bin\System.Web.Http.WebHost.dll
+C:\Users\Frederik\source\repos\Vidly2\Vidly2\bin\System.Net.Http.Formatting.xml
+C:\Users\Frederik\source\repos\Vidly2\Vidly2\bin\System.Web.Http.xml
+C:\Users\Frederik\source\repos\Vidly2\Vidly2\bin\System.Web.Http.WebHost.xml
